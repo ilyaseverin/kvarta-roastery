@@ -6,7 +6,10 @@ const headers = { 'Cache-Control': 'no-store' };
 
 export async function POST(request: Request) {
   const origin = request.headers.get('origin');
-  if (origin && origin !== new URL(request.url).origin) return Response.json({ message: 'Откройте форму на сайте «Кварты» и попробуйте ещё раз.' }, { status: 403, headers });
+  const host = request.headers.get('x-forwarded-host')?.split(',')[0].trim() || request.headers.get('host') || new URL(request.url).host;
+  let allowedOrigin = !origin;
+  try { if (origin) { const url = new URL(origin); allowedOrigin = ['http:', 'https:'].includes(url.protocol) && url.host === host; } } catch { allowedOrigin = false; }
+  if (!allowedOrigin) return Response.json({ message: 'Откройте форму на сайте «Кварты» и попробуйте ещё раз.' }, { status: 403, headers });
   if (!request.headers.get('content-type')?.includes('application/json')) return Response.json({ message: 'Не удалось прочитать заявку. Обновите страницу.' }, { status: 415, headers });
   let body: unknown;
   try {
