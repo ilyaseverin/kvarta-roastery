@@ -124,7 +124,7 @@ h1{font-size:clamp(52px,5.45vw,81px);line-height:1.1;position:relative;letter-sp
 .subscription-price>div{font-size:13px;line-height:1.8}.subscription-price>div>span{display:block;font-size:11px;color:#e3e5d2}
 .button-light{background:var(--milk);color:#353a2d;min-width:230px}.button-light:hover{background:#f4ecd9}.button-light .button-icon{background:#454e35}
 .subscription-fine{font-size:11px;line-height:1.7;margin-top:16px;color:#e3e5d2;max-width:36ch}
-.subscription-still{position:relative;display:flex;align-items:center;justify-content:center;background:#6d7756;border-radius:180px 180px 34px 34px;min-height:450px;min-width:0;isolation:isolate}
+.subscription-still{position:relative;display:flex;align-items:center;justify-content:center;background:#626d4e;border-radius:180px 180px 34px 34px;min-height:450px;min-width:0;isolation:isolate}
 .subscription-orbit{position:absolute;width:320px;height:320px;border:1px solid #dbe1c259;border-radius:50%;z-index:-1}
 .subscription-bags{display:flex;align-items:center;position:relative;transform:translateY(-8px)}
 .subscription-bags .coffee-bag{transform:rotate(-14deg) translateX(12px);filter:drop-shadow(5px 16px 8px #2d34253b)}
@@ -149,7 +149,7 @@ h1{font-size:clamp(52px,5.45vw,81px);line-height:1.1;position:relative;letter-sp
 .delivery-grid h3{font-size:24px;letter-spacing:-.8px;line-height:1.2;margin:7px 0 17px}
 .delivery-info p{font-size:13px;color:#d5c4b0;line-height:1.8}.delivery-info strong{font-weight:500;display:block;margin-top:8px;color:var(--milk)}
 .delivery-info p.delivery-small{font-size:11px;color:#bda994;margin-top:9px}
-.delivery-day{position:absolute;right:25px;bottom:12px;font-size:96px;font-family:var(--display);line-height:1;letter-spacing:-10px;color:#c7aa8824;pointer-events:none}
+.delivery-day{position:absolute;right:25px;bottom:12px;font-size:96px;font-family:var(--display);line-height:1;letter-spacing:-10px;color:#b39a7c;pointer-events:none}
 .delivery-grid article.pickup-info{background:var(--primary);color:#303b27}.pickup-info .delivery-symbol{color:#3c492f;border-color:#4c5c3b55}
 .address-link{display:inline-flex;align-items:center;gap:20px;font-size:14px;border-bottom:1px solid #46553866;padding-bottom:4px}
 .address-link svg{width:17px;height:17px}
@@ -205,3 +205,14 @@ h1{font-size:clamp(52px,5.45vw,81px);line-height:1.1;position:relative;letter-sp
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important}.hero-image{transform:none!important;will-change:auto}}
 
 @media(max-width:760px){.delivery-grid article{display:block;padding:27px}.delivery-symbol{margin-bottom:18px}.delivery-grid h3{font-size:23px;margin-top:0}.delivery-info p{font-size:13px}.delivery-info p.delivery-small{font-size:11px}.address-link{font-size:14px}.opening-hours{font-size:11px}.opening-hours>div{gap:12px}.delivery-day{right:24px;top:25px;bottom:auto;font-size:75px}}
+
+@media(max-width:760px){
+ .header-order{font-size:12px}.hero-intro{font-size:11px;white-space:normal}.hero-secondary{font-size:12px}.hero-description{font-size:13px}
+ .fresh-stamp span{font-size:10px}.roast-route>div{flex-direction:column;align-items:flex-start;gap:3px}.roast-route span{font-size:11px}.roast-route{padding-block:12px}
+ .small-label,.section-kicker,.product-weight,.product-scene-note{font-size:12px}
+ .drip-label,.drip-copy p,.drip-order>span{font-size:12px}.drip-label{line-height:1.6}.drip-copy p{line-height:1.7}.drip-order .product-order{font-size:12px}
+ .subscription-fine,.subscription-quantity,.subscription-price>div>span{font-size:12px}.subscription-delivery{font-size:11px}.subscription-quantity{color:#fff8e7}.subscription-fine{max-width:33ch}
+ .form-note,.field-hint,.field-error,.field label span{font-size:12px}.field label span{display:block;margin-left:0}.interest-option{font-size:12px;min-height:44px}
+ .founder-signature span,.workshop-stamp span{font-size:11px}.footer-top,.footer-top a{font-size:12px}.footer-top small{font-size:11px}.footer-top a{max-width:21ch}
+}
+@media(max-width:380px){.header-order{font-size:11px}.hero-intro{font-size:10px}.hero-description{font-size:12px}.fresh-stamp span{font-size:9px}.roast-route span{font-size:10px}.drips{grid-template-columns:1fr 1.25fr;gap:13px}.drip-copy h3{font-size:22px}.drip-illustration{margin-left:-30px;transform:scale(.62)}.drip-copy p,.drip-label,.drip-order>span{font-size:11px}.drip-order .product-order{font-size:11px}.subscription-price{align-items:flex-start}.subscription-price>div{padding-top:6px}.subscription-price>div>span{font-size:11px;max-width:18ch}.interest-option{font-size:11px;padding-inline:12px}}

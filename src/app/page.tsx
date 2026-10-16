@@ -21,15 +21,15 @@ export default function Home() {
       <a href="#" className="wordmark" aria-label="Кварта, на главную">кварта<span className="wordmark-dot">.</span></a>
       <span className="header-location">Обжариваем сами.<br />Минск, с 2019</span>
       <nav aria-label="Основная навигация"><a href="#coffee">Кофе</a><a href="#subscription">Подписка</a><a href="#about">Мастерская</a><a href="#delivery">Доставка</a></nav>
-      <OrderLink interest="subscription" className="header-order">Давайте знакомиться <ArrowUpRight aria-hidden="true" /></OrderLink>
+      <OrderLink interest="subscription" className="header-order">Хочу кофе <ArrowUpRight aria-hidden="true" /></OrderLink>
     </header>
     <main id="main">
       <section className="hero shell" aria-labelledby="hero-heading">
         <div className="hero-photo"><div className="hero-image-window"><Image className="hero-image" src="/images/roasting.webp" alt="Руки с кофейным зерном у охлаждающего барабана ростера" fill sizes="(max-width: 760px) 100vw, 60vw" priority quality={85} /></div></div>
         <div className="hero-copy">
-          <p className="hero-intro"><span className="live-dot" />Маленькая обжарка. Большая любовь к кофе.</p>
+          <p className="hero-intro"><span className="live-dot" />Своя обжарка. Минск, с 2019.</p>
           <h1 id="hero-heading">Ваш кофе<br />начинается<br />в четверг.</h1>
-          <p className="hero-description">Обжариваем партиями по 5 кг.<br />В пятницу привозим по Минску —<br />чтобы свежесть была не просто словом.</p>
+          <p className="hero-description">Обжариваем партиями по 5 кг.<br />В пятницу привозим по Минску.<br />На 1–3 день после обжарки.</p>
           <div className="hero-actions"><Button asChild className="button"><a href="#coffee">Выбрать кофе <Arrow /></a></Button><a className="hero-secondary" href="#subscription">Или по подписке <ArrowRight aria-hidden="true" /></a></div>
         </div>
         <div className="hero-product" aria-hidden="true"><CoffeeBag variant="ethiopia" /><span className="hero-product-note">Своя обжарка.<br />Ничего лишнего.</span></div>
