@@ -1,4 +1,5 @@
 import { createHmac, randomUUID } from 'node:crypto';
+import { getStore } from '@netlify/blobs';
 import type { LeadInput } from './lead';
 
 export const DEDUP_MS = 10 * 60 * 1000;
@@ -32,8 +33,7 @@ export async function saveLead(store: AtomicStore, input: LeadInput, secret: str
 
 export async function createLeadStore(): Promise<AtomicStore> {
   if (process.env.LEAD_STORAGE === 'netlify') {
-    const { getStore } = await import('@netlify/blobs');
-    const blobs = getStore({ name: 'kvarta-leads-v1', consistency: 'strong' });
+    const blobs = getStore({ name: 'kvarta-leads-v1', consistency: 'strong', fetch: (url, init) => fetch(url, { ...init, cache: 'no-store', signal: AbortSignal.timeout(7000) }) });
     return {
       async read(key) {
         const entry = await blobs.getWithMetadata(key, { type: 'json', consistency: 'strong' });

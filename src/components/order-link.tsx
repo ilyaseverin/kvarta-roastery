@@ -10,7 +10,11 @@ export function OrderLink({ interest, product, children, className = 'button' }:
   return <a href={`?${query.toString()}#request`} className={className} onClick={event => {
     event.preventDefault();
     selectOrder({ interest, product });
-    window.history.replaceState(null, '', `${window.location.pathname}${window.location.search}#request`);
+    const target = new URL(window.location.href);
+    target.searchParams.set('interest', interest);
+    if (product) target.searchParams.set('product', product); else target.searchParams.delete('product');
+    target.hash = 'request';
+    window.history.replaceState(null, '', target);
     document.getElementById('request')?.scrollIntoView({ behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth' });
     document.getElementById('request-name')?.focus({ preventScroll: true });
   }}>{children}</a>;

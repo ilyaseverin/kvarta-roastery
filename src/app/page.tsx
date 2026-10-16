@@ -42,6 +42,6 @@ export default function Home() {
 
       <section id="request" className="request-section" aria-labelledby="request-heading"><div className="shell request-inner"><div className="request-copy"><p className="small-label">Давайте знакомиться</p><h2 id="request-heading">С вас — номер.<br />С нас —<br />хороший кофе.</h2><p>Расскажите, что вас интересует.<br />Мы перезвоним, поможем выбрать<br />и договоримся о доставке.</p><span className="request-aside">Можно просто спросить.<br />Мы любим говорить о кофе.</span></div><LeadForm /></div></section>
     </main>
-    <footer className="site-footer shell"><a href="#" className="wordmark" aria-label="Кварта, в начало страницы">кварта<span className="wordmark-dot">.</span></a><p>Маленькая обжарка.<br />Минск, ул. Короля, 9.</p><span>С четверга — с любовью.</span><small>© 2026 Кварта<br />Учебный проект · вымышленная мастерская</small></footer>
+    <footer className="site-footer shell"><a href="#" className="wordmark" aria-label="Кварта, в начало страницы">кварта<span className="wordmark-dot">.</span></a><p>Маленькая обжарка.<br />Минск, ул. Короля, 9.</p><span>С четверга — с любовью.</span><small>© 2026 Кварта</small></footer>
   </>;
 }
