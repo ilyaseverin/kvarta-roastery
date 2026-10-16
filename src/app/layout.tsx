@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from 'next';
 import Script from 'next/script';
 import '@fontsource-variable/golos-text';
+import '@fontsource-variable/unbounded';
 import { ATTRIBUTION_BOOTSTRAP } from '@/lib/attribution';
 import './globals.css';
 
@@ -13,7 +14,7 @@ export const metadata: Metadata = {
   twitter: { card: 'summary_large_image', title: 'Кварта — кофе из мастерской', description: 'Свежая обжарка по четвергам, доставка по Минску в пятницу.', images: ['/og.jpg'] },
   icons: { icon: '/favicon.svg' },
 };
-export const viewport: Viewport = { themeColor: '#F6F3E9' };
+export const viewport: Viewport = { themeColor: '#241c18' };
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return <html lang="ru"><body><Script id="kvarta-attribution" strategy="beforeInteractive" dangerouslySetInnerHTML={{ __html: ATTRIBUTION_BOOTSTRAP }} />{children}</body></html>;
 }

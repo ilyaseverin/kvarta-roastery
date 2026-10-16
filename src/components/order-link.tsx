@@ -3,11 +3,12 @@
 import type { ReactNode } from 'react';
 import type { Interest } from '@/lib/lead';
 import { selectOrder } from '@/lib/order-selection';
+import { Button } from '@/components/ui/button';
 
 export function OrderLink({ interest, product, children, className = 'button' }: { interest: Interest; product?: string; children: ReactNode; className?: string }) {
   const query = new URLSearchParams({ interest });
   if (product) query.set('product', product);
-  return <a href={`?${query.toString()}#request`} className={className} onClick={event => {
+  return <Button asChild className={className}><a href={`?${query.toString()}#request`} onClick={event => {
     event.preventDefault();
     selectOrder({ interest, product });
     const target = new URL(window.location.href);
@@ -17,5 +18,5 @@ export function OrderLink({ interest, product, children, className = 'button' }:
     window.history.replaceState(null, '', target);
     document.getElementById('request')?.scrollIntoView({ behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth' });
     document.getElementById('request-name')?.focus({ preventScroll: true });
-  }}>{children}</a>;
+  }}>{children}</a></Button>;
 }

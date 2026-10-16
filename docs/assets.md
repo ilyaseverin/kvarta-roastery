@@ -8,4 +8,6 @@
 
 Условия: https://www.pexels.com/license/. Источники проверены 16 октября 2026. Изображения скачаны, уменьшены и оптимизированы для проекта; чужие логотипы не используются.
 
-Упаковки — авторская CSS-графика для этого учебного проекта. Логотип — текстовый. Шрифт Golos Text распространяется по SIL Open Font License и подключён локально через `@fontsource-variable/golos-text`.
+Упаковки и чашка — авторская CSS-графика для этого учебного проекта. Логотип — текстовый. Шрифты Golos Text и Unbounded распространяются по SIL Open Font License и подключены локально через Fontsource.
+
+Кнопки, Input и Textarea добавлены официальной CLI из [реестра shadcn/ui](https://ui.shadcn.com/docs/installation/manual), стиль `new-york`. Компоненты в `src/components/ui`, тема и размеры адаптированы к «Кварте». [MIT-лицензия](../src/components/ui/LICENSE.md). Иконки — Lucide; лицензии зависимостей входят в npm-пакеты.
